@@ -3,8 +3,12 @@
 
 using Delegates.Classes;
 
-HulloWorld hulloWorld = new HulloWorld();
+// HulloWorld hulloWorld = new HulloWorld();
 
-hulloWorld.Greet();
+// hulloWorld.Greet();
+
+BasicDelegate basicDelegate = new BasicDelegate();
+
+basicDelegate.Run();
 
 
