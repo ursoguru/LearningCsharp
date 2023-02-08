@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/garycarter/Projects/DelegatesSOL/Delegates/Delegates.csproj",
+      "projectUniqueName": "/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/Delegates.csproj",
       "projectName": "Delegates",
-      "projectPath": "/Users/garycarter/Projects/DelegatesSOL/Delegates/Delegates.csproj",
+      "projectPath": "/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/Delegates.csproj",
       "packagesPath": "/Users/garycarter/.nuget/packages/",
-      "outputPath": "/Users/garycarter/Projects/DelegatesSOL/Delegates/obj/",
+      "outputPath": "/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/garycarter/.nuget/NuGet/NuGet.Config"
