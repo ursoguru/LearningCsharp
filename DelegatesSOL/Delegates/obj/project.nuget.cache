@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Dg1y8DWF74z79HVgcKLa46VBTFKfIoxtB2/pLRqAV8zJzonOOxSXvq2r6XNkdoFll4LYf4z6D22aX42ilyojAg==",
+  "dgSpecHash": "4nfYFph7FXiHYMp5ZpI1xvxzE66k195hO7YccLnx57+7rtqOsoFgfA+rM9OQ4spxIH0xgdXI2uB3EPqrWpI64A==",
   "success": true,
-  "projectFilePath": "/Users/garycarter/Projects/DelegatesSOL/Delegates/Delegates.csproj",
+  "projectFilePath": "/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/Delegates.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
