@@ -1,0 +1,15 @@
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/bin/Debug/net7.0/Delegates
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/bin/Debug/net7.0/Delegates.deps.json
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/bin/Debug/net7.0/Delegates.runtimeconfig.json
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/bin/Debug/net7.0/Delegates.dll
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/bin/Debug/net7.0/Delegates.pdb
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.csproj.AssemblyReference.cache
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.GeneratedMSBuildEditorConfig.editorconfig
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.AssemblyInfoInputs.cache
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.AssemblyInfo.cs
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.csproj.CoreCompileInputs.cache
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.dll
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/refint/Delegates.dll
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.pdb
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/Delegates.genruntimeconfig.cache
+/Users/garycarter/Projects/LearningCsharp/DelegatesSOL/Delegates/obj/Debug/net7.0/ref/Delegates.dll
