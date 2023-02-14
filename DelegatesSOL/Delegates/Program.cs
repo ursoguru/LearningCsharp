@@ -8,7 +8,9 @@ using Delegates.Classes;
 // hulloWorld.Greet();
 
 BasicDelegate basicDelegate = new BasicDelegate();
+AdvancedDelegate AdvancedDelegate = new AdvancedDelegate();
 
-basicDelegate.Run();
+//basicDelegate.Run();
+AdvancedDelegate.Run();
 
 

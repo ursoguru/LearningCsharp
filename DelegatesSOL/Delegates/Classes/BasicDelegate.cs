@@ -9,13 +9,21 @@ namespace Delegates.Classes
 		}
         public void Run()
         {
-			LogDel logDel = new LogDel(LogTextToScreen);
+			Log log = new Log();
 
-			Console.WriteLine("Emter name");
+			LogDel LogTextToScreenDel, LogTextToFileDel;
+
+            LogTextToScreenDel = new LogDel(log.LogTextToScreen);
+
+            LogTextToFileDel = new LogDel(log.LogTextToFile);
+
+            LogDel multiLogDel = LogTextToScreenDel + LogTextToFileDel;
+
+            Console.WriteLine("Emter name");
 
 			var name = Console.ReadLine();
 
-			logDel("text");
+			multiLogDel(name);
 
 			Console.ReadKey();
         }
@@ -27,4 +35,22 @@ namespace Delegates.Classes
         }
     }
 }
+
+public class Log
+{
+    public void LogTextToScreen(string text)
+    {
+        Console.WriteLine($"{DateTime.Now}: {text}");
+
+    }
+
+	public void LogTextToFile(string text)
+    {
+        using (StreamWriter sw = new StreamWriter(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log.text"), true))
+		{
+			sw.WriteLine($"{DateTime.Now}: {text}");
+        }
+    }
+}
+
 

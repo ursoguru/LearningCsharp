@@ -6,16 +6,20 @@
   <MonoDevelop.Ide.ItemProperties.Delegates PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Delegates/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Delegates/Classes/BasicDelegate.cs">
     <Files>
-      <File FileName="Delegates/Program.cs" Line="4" Column="1" />
+      <File FileName="Delegates/Program.cs" Line="8" Column="4" IsPinned="True" />
+      <File FileName="Delegates/Classes/HulloWorld.cs" Line="13" Column="10" />
+      <File FileName="Delegates/Classes/EmptyClass.cs" Line="18" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DelegatesSOL" expanded="True">
             <Node name="Delegates" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Classes" expanded="True">
+                <Node name="BasicDelegate.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
