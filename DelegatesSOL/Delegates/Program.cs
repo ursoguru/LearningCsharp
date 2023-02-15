@@ -9,8 +9,10 @@ using Delegates.Classes;
 
 BasicDelegate basicDelegate = new BasicDelegate();
 AdvancedDelegate AdvancedDelegate = new AdvancedDelegate();
+CleverStack CleverStack = new CleverStack();
 
 //basicDelegate.Run();
-AdvancedDelegate.Run();
+//AdvancedDelegate.Run();
+CleverStack.Run();
 
 
