@@ -6,16 +6,16 @@ using System.Xml.Serialization;
 
 namespace Delegates.Classes
 {
-	public class XMLRead
-	{
-		public XMLRead()
-		{
-		}
-
-    /*    public class Book
+    public class XMLRead
+    {
+        public XMLRead()
         {
-            public String title;
-        } */
+        }
+
+        /*    public class Book
+            {
+                public String title;
+            } */
 
         public class Catalog
         {
@@ -47,7 +47,27 @@ namespace Delegates.Classes
 
         }
 
-        
+        public class Model
+        {
+            public string id { get; set; }
+            public ModelGroup[] model_groups { get; set; }
+        }
+
+        public class ModelGroup
+        {
+            public string id { get; set; }
+            public string v380 { get; set; }
+            public string v220 { get; set; }
+            public float kw { get; set; }
+            public Flow[] flows { get; set; }
+        }
+
+        public class Flow
+        {
+            public float m3h { get; set; }
+            public float head { get; set; }
+        }
+
 
         public void Run()
         {
@@ -79,56 +99,97 @@ namespace Delegates.Classes
                fileB.Close();
 
                */
-            int Fred;
+            // int Fred;
 
-            string[] jack = { "1", "2", "3" };
-
-
+            // string[] jack = { "1", "2", "3" };
 
 
 
-          /*  List<Catalog> catalogs =
+
+
+            /*  List<Catalog> catalogs =
+                  (
+                      from e in XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"book.xml")).Root.Elements("book")
+                     // from e in jack
+                      select new Catalog
+                      {
+                          id = 1,
+                          anything = (string)e.Element("author"),
+                          books =
+                          (
+                              from p in e.Elements("author")
+                             // from p in jack
+                              select new Book
+                              {
+                                  author = "jack"
+                                /*  author = (string)p.Element("author"),
+                                  title = (string)p.Element("title"),
+                                  genre = (string)p.Element("genre"),
+                                  price = (float)p.Element("price") 
+                              }).ToArray()
+                      }).ToList(); */
+
+            /* List<Book> books =
+                 (
+                     from p in XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"book.xml")).Root.Elements("book")
+                         // from e in jack
+                     select new Book
+                     {
+
+                         author = (string)p.Element("author"),
+                         title = (string)p.Element("title"),
+                         genre = (string)p.Element("genre"),
+                         price = (float)p.Element("price"),
+
+                     }).ToList();
+
+             Console.WriteLine(books[1].author); */
+
+            List<Model> models =
                 (
-                    from e in XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"book.xml")).Root.Elements("book")
-                   // from e in jack
-                    select new Catalog
+                    from e in XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"BosterPumps.xml")).Root.Elements("model")
+                    select new Model
                     {
-                        id = 1,
-                        anything = (string)e.Element("author"),
-                        books =
+                        id = (string)e.Element("id"),
+                        model_groups =
                         (
-                            from p in e.Elements("author")
-                           // from p in jack
-                            select new Book
+                            from p in e.Elements("model_groups")
+                            select new ModelGroup
                             {
-                                author = "jack"
-                              /*  author = (string)p.Element("author"),
-                                title = (string)p.Element("title"),
-                                genre = (string)p.Element("genre"),
-                                price = (float)p.Element("price") 
-                            }).ToArray()
-                    }).ToList(); */
+                                id = (string)p.Element("id"),
+                                v380 = (string)p.Element("v380"),
+                                v220 = (string)p.Element("v220"),
+                                kw = (float)p.Element("kw"),
+                                flows =
+                                (
+                                  from r in p.Elements("flow")
+                                  select new Flow
+                                  {
+                                      m3h = (float)r.Element("m3h"),
+                                      head = (float)r.Element("head")
+                                  }
+                                ).ToArray()
+                            }
+                        ).ToArray()
 
-            List<Book> books =
-                (
-                    from p in XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"book.xml")).Root.Elements("book")
-                        // from e in jack
-                    select new Book
-                    {
-                      
-                        author = (string)p.Element("author"),
-                        title = (string)p.Element("title"),
-                        genre = (string)p.Element("genre"),
-                        price = (float)p.Element("price"), 
-                           
+                        /*  author = (string)p.Element("author"),
+                          title = (string)p.Element("title"),
+                          genre = (string)p.Element("genre"),
+                          price = (float)p.Element("price"),*/
+
                     }).ToList();
 
-            Console.WriteLine(books[1].author);
+            Console.WriteLine(models[0].model_groups[0].id);
+
 
         }
+            
+
+
+    
 
 
     }
-    
-}
 
+
+}
