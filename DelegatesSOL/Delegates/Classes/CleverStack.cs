@@ -9,50 +9,50 @@ namespace Delegates.Classes
 
 
 
-    public class Stack<T>
-    {
-        Entry _top;
-
-        public void Push(T data)
+        public class Stack<T>
         {
-            _top = new Entry(_top, data);
-        }
+            Entry _top;
 
-        public T Pop()
-        {
-            if (_top == null)
+            public void Push(T data)
             {
-                throw new InvalidOperationException();
+                _top = new Entry(_top, data);
             }
-            T result = _top.Data;
-            _top = _top.Next;
 
-            return result;
-        }
-
-        class Entry
-        {
-            public Entry Next { get; set; }
-            public T Data { get; set; }
-
-            public Entry(Entry next, T data)
+            public T Pop()
             {
-                Next = next;
-                Data = data;
+                if (_top == null)
+                {
+                    throw new InvalidOperationException();
+                }
+                T result = _top.Data;
+                _top = _top.Next;
+
+                return result;
             }
+
+            class Entry
+            {
+                public Entry Next { get; set; }
+                public T Data { get; set; }
+
+                public Entry(Entry next, T data)
+                {
+                    Next = next;
+                    Data = data;
+                }
+            }
+        }
+        public void Run()
+        {
+
+            var s = new Stack<int>();
+            s.Push(1); // stack contains 1
+            s.Push(10); // stack contains 1, 10
+            s.Push(100); // stack contains 1, 10, 100
+            Console.WriteLine(s.Pop()); // stack contains 1, 10
+            Console.WriteLine(s.Pop()); // stack contains 1
+            Console.WriteLine(s.Pop()); // stack is empty
         }
     }
-    public void Run()
-    {
-
-        var s = new Stack<int>();
-        s.Push(1); // stack contains 1
-        s.Push(10); // stack contains 1, 10
-        s.Push(100); // stack contains 1, 10, 100
-        Console.WriteLine(s.Pop()); // stack contains 1, 10
-        Console.WriteLine(s.Pop()); // stack contains 1
-        Console.WriteLine(s.Pop()); // stack is empty
-    }
-}
 }
 

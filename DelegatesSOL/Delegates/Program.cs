@@ -10,9 +10,11 @@ using Delegates.Classes;
 BasicDelegate basicDelegate = new BasicDelegate();
 AdvancedDelegate AdvancedDelegate = new AdvancedDelegate();
 CleverStack CleverStack = new CleverStack();
+XMLRead XMLRead = new XMLRead();
 
 //basicDelegate.Run();
 //AdvancedDelegate.Run();
-CleverStack.Run();
+// CleverStack.Run();
+ XMLRead.Run();
 
 
