@@ -68,6 +68,23 @@ namespace Delegates.Classes
             public float head { get; set; }
         }
 
+        float[,] boosterPerformanceVMS8 = new float[,]
+             { { 6, 7,  8,  9,  10, 11,},
+          { 10, 9.3F, 9, 18.5F, 8F, 7F,},
+          { 20, 19, 18, 17, 16, 14,},
+          { 30, 28.5F, 27, 25, 24, 21,},
+          { 41, 38, 36, 34, 32, 28,},
+          { 52, 48, 45, 42, 40, 36,},
+          { 62, 57, 54, 51, 48, 43,},
+          { 83, 77, 73, 69, 65, 58,},
+          { 104, 97, 92, 87, 81, 73,},
+          { 124, 116, 111, 104, 92, 87,},
+          { 145, 136, 130, 122, 113, 102,},
+          { 166, 156, 148, 139, 130, 118,},
+          { 187, 175, 167, 157, 146, 134,},
+          { 208, 195, 186, 175, 163, 150,},};
+
+        float[,] boosterPerformanceTest = new float[16,6];
 
         public void Run()
         {
@@ -179,8 +196,32 @@ namespace Delegates.Classes
 
                     }).ToList();
 
-            Console.WriteLine(models[0].model_groups[0].id);
+            
 
+            int pint = 0;
+            int rint = 0;
+
+            foreach (Model e in models)
+            {
+                foreach (ModelGroup p in e.model_groups)
+                {
+                    foreach (Flow r in p.flows)
+                    {
+                        Console.WriteLine(r.head);
+                        if (pint == 0) {
+                            boosterPerformanceTest[0, rint] = r.m3h;
+                        }
+                        boosterPerformanceTest[pint+1, rint] = r.head;
+                        rint++;
+                    }
+                    Console.WriteLine(p.kw);
+                    pint++;
+                    rint = 0;
+                }
+                Console.WriteLine(e.model_groups[0].id);
+            }
+
+            Console.WriteLine(models[0].model_groups[0].id);
 
         }
             
